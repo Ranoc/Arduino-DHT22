@@ -32,6 +32,7 @@ class DHT22
 	short int getHumidityInt();
 	short int getTemperatureCInt();
     void clockReset();
+	void clockReset(unsigned long offset);
 #if !defined(DHT22_NO_FLOAT)
     float getHumidity();
     float getTemperatureC();

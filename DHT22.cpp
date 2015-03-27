@@ -235,3 +235,11 @@ void DHT22::clockReset()
 {
   _lastReadTime = millis();
 }
+
+//
+// This is used when the millis clock rolls over to zero. Useful in sleep.
+//
+void DHT22::clockReset(unsigned long offset)
+{
+  _lastReadTime = millis() + offset;
+}
